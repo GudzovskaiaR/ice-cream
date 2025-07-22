@@ -1,3 +1,31 @@
 //====================================================================================================
+.footer {
+  // .footer__container
+  background-color: $mainColor;
+  padding: toRem(26) toRem(10);
 
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  // .footer__info
+
+  &__info {
+    color: #fff;
+    font-size: toRem(24);
+    line-height: 100%;
+    letter-spacing: 12%;
+    @include adaptiveValue('font-size', 24, 16);
+  }
+}
+.span-yellow {
+  color: $yellowColor;
+}
+.span-blue {
+  color: $blueColor;
+}
+.span-pink {
+  color: $pinkColor;
+}
 //====================================================================================================

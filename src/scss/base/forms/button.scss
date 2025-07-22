@@ -2,13 +2,73 @@
 // Сніппет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&--fw {
-		width: 100%;
-	}
+  background-color: $yellowColor;
+  border: toRem(3) solid #000;
+  border-radius: toRem(100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 2s;
+  line-height: 99.75%;
+  letter-spacing: 0.12em;
+  text-transform: capitalize;
+  @include adaptiveValue('padding-top', 26, 15);
+  @include adaptiveValue('padding-bottom', 23, 12);
+  @include adaptiveValue('padding-left', 29, 15, 0, $maxWidth, 1222.99);
+  @include adaptiveValue('padding-right', 29, 15, 0, $maxWidth, 1222.99);
+  @include adaptiveValue('font-size', 24, 13);
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #f1b511;
+    }
+  }
+  &--fw {
+    width: 100%;
+  }
+  &--smallBorder {
+    border-radius: toRem(14);
+    line-height: 100%;
+    @include adaptiveValue('padding-top', 27, 15);
+    @include adaptiveValue('padding-bottom', 27, 12);
+    @include adaptiveValue('padding-left', 37, 15);
+    @include adaptiveValue('padding-right', 17, 15);
+    @include adaptiveValue('font-size', 32, 16);
+  }
+  &--white {
+    transition: all ease 2s;
+    background-color: #fff;
+    border: toRem(3) solid #f3cb60;
+    @include adaptiveValue('padding-left', 52, 25);
+    @include adaptiveValue('padding-right', 52, 26);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #c2d2ef;
+      }
+    }
+  }
+  &--big {
+    transition: background-color 0.5s;
+    line-height: 99.75%; /* 27.93/28 */
+    @include adaptiveValue('padding-top', 32, 20);
+    @include adaptiveValue('padding-bottom', 32, 20);
+    @include adaptiveValue('padding-left', 85, 50);
+    @include adaptiveValue('padding-right', 85, 50);
+    @include adaptiveValue('font-size', 28, 18);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #f1b511;
+      }
+    }
+  }
+  &--black {
+    color: $yellowColor;
+    background-color: #000;
+    border: toRem(2) solid #fff;
+    border-radius: toRem(14);
+    @include adaptiveValue('padding-top', 19, 10);
+    @include adaptiveValue('padding-bottom', 19, 10);
+    @include adaptiveValue('padding-left', 27, 10);
+    @include adaptiveValue('padding-right', 27, 10);
+    @include adaptiveValue('font-size', 24, 14);
+  }
 }

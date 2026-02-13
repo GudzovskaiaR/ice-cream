@@ -1,0 +1,2 @@
+C:\Users\Володимир\AppData\Local\Programs\Git\mingw64\bin\git.exe
+C:\Users\Володимир\AppData\Local\Programs\Git\cmd\git.exe

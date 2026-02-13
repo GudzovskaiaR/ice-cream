@@ -16,7 +16,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
     }
 
     // .footer__menu
@@ -27,10 +26,10 @@
         @include adaptiveValue('padding-bottom', 61, 30);
         @include adaptiveValue('padding-right', 15, 10);
         @include adaptiveValue('padding-left', 28, 15);
-        
     }
-     &__logo, &__menu{
-       &::after {
+    &__logo,
+    &__menu {
+        &::after {
             content: '';
             position: absolute;
             width: toRem(2);
@@ -39,8 +38,8 @@
             transform: translateY(-50%);
             right: 0;
             z-index: 10;
-            @include adaptiveValue("height",153 ,120 ); 
-     }
+            @include adaptiveValue('height', 153, 120);
+        }
     }
     // .footer__form
 }
@@ -53,37 +52,36 @@
     img {
         width: 100%;
     }
-    
 }
 .menu-footer {
-        // .menu-footer__list
+    // .menu-footer__list
 
-        &__list {
+    &__list {
+    }
+
+    // .menu-footer__item
+
+    &__item {
+        &:not(:last-child) {
+            @include adaptiveValue('margin-bottom', 30, 15);
         }
 
-        // .menu-footer__item
+        // .menu-footer__link
+    }
+    &__link {
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 12%;
+        transition: all ease 1s;
 
-        &__item {
-            &:not(:last-child) {
-                @include adaptiveValue('margin-bottom', 30, 15);
-            }
-
-            // .menu-footer__link
-        }
-        &__link {
-            font-weight: 500;
-            line-height: 100%;
-            letter-spacing: 12%;
-            transition: all ease 1s;
-         
-            @include adaptiveValue('font-size', 24, 12);
-            @media (any-hover: hover) {
-                &:hover {
-                    text-decoration: underline;
-                }
+        @include adaptiveValue('font-size', 24, 12);
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
+}
 
 .footer__socialNetworks {
     display: flex;

@@ -1,3 +1,107 @@
 //====================================================================================================
+.footer {
+    background-color: #f3cb60;
+    // .footer__container
 
-//====================================================================================================
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: toRem(10);
+    }
+
+    // .footer__logo
+
+    &__logo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    // .footer__menu
+
+    &__menu {
+        position: relative;
+        @include adaptiveValue('padding-top', 45, 20);
+        @include adaptiveValue('padding-bottom', 61, 30);
+        @include adaptiveValue('padding-right', 15, 10);
+        @include adaptiveValue('padding-left', 28, 15);
+        
+    }
+     &__logo, &__menu{
+       &::after {
+            content: '';
+            position: absolute;
+            width: toRem(2);
+            background-color: #000;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            z-index: 10;
+            @include adaptiveValue("height",153 ,120 ); 
+     }
+    }
+    // .footer__form
+}
+.logo-footer {
+    // .logo-footer__wrapper
+
+    &__wrapper {
+        width: 66%;
+    }
+    img {
+        width: 100%;
+    }
+    
+}
+.menu-footer {
+        // .menu-footer__list
+
+        &__list {
+        }
+
+        // .menu-footer__item
+
+        &__item {
+            &:not(:last-child) {
+                @include adaptiveValue('margin-bottom', 30, 15);
+            }
+
+            // .menu-footer__link
+        }
+        &__link {
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: 12%;
+            transition: all ease 1s;
+         
+            @include adaptiveValue('font-size', 24, 12);
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+.footer__socialNetworks {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: toRem(91);
+
+    align-items: center;
+
+    img {
+        margin-right: toRem(21);
+        margin-right: toRem(21);
+        @media (max-width: $tablet) {
+            width: 70%;
+            margin-right: toRem(0);
+        }
+    }
+    @media (max-width: $tablet) {
+        justify-content: center;
+    }
+}

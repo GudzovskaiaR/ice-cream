@@ -1,12 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  @@include('html/_head.htm',{ "title":"HomePage" })
-  <body>
-    <div class="wrapper">
-      @@include('html/_header.htm',{})
-      <main class="page"></main>
-      @@include('html/_footer.htm',{})
-    </div>
-    @@include('html/_js.htm',{})
-  </body>
+@@include('html/_head.htm',{ "title":"Ice Cream" })
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="hero">
+        <div data-prlx data-coefficient="4" class="hero__container">
+          <div class="hero__content content-hero">
+            <div data-prlx data-coefficient="4" class="title_wrapper">
+              <h1 data-watch class="content-hero__title">
+                grab the best ice cream
+              </h1>
+            </div>
+
+            <div  class="hero__text">
+              <p data-watch>
+                Our ice cream shop offers unique flavors and handcrafted
+                products. Don't be afraid to try something new; you might
+                discover a flavor that becomes your new favorite. From classic
+                cones to decadent sundaes. Enjoy the journey of finding it!
+              </p>
+            </div>
+            <div data-watch class="button__wrapper">
+              <button data-ripple data-prlx data-coefficient="1" class="hero__button button button--big">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div class="hero__image hero-image">
+            <div data-prlx data-coefficient="4" class="hero-image__wrapper">
+              <img data-watch src="@img/hero/hero-ice.png" alt="image" />
+            </div>
+          </div>
+        </div>
+        <img src="@img/hero/hero-bg.jpg" alt="image" class="hero__bg" />
+      </section>
+      <section class="care">
+        <div class="care__container">
+          <div data-watch class="bg-img">
+            <img src="@img/care/milk.png" alt="milk" />
+          </div>
+          <h2 data-watch  class="care__title">we care about you!</h2>
+          <div class="care__body">
+            <div class="care__content content-care">
+              <div data-watch  class="content-care__text">
+                <p>
+                  High-quality milk plays a key role in producing delicious
+                  ice cream. It is important that the milk is fresh and
+                  natural, without any additives. Well-chosen milk gives the
+                  ice cream a delicate texture and rich flavor.
+                </p>
+                <p>
+                  We work with reliable milk suppliers to ensure consistently
+                  high product quality. We also adhere to strict hygiene and
+                  safety standards at all stages of production, which ensures
+                  the safety and quality of the finished ice cream.
+                </p>
+                <div class="care__actions">
+                  <button data-ripple data-watch class="care__btn button">
+                    Learn More
+                  </button>
+                  <button data-ripple data-watch class="care__btn button button--white">
+                    Try Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="care__image image-care">
+              <div data-watch class="image-care__text">
+                <p>
+                  The company uses various types of plant-based milk to
+                  produce ice cream to cater to diverse consumer preferences
+                  and provide an alternative to traditional dairy ice cream.
+                  Using plant-based milk allows for the creation of different
+                  flavors and textures, meeting the needs of those who avoid
+                  dairy products or seek new and more interesting ice cream
+                  options.
+                </p>
+              </div>
+              <button data-watch data-ripple class="image__btn button">
+                Learn More
+              </button>
+              <div class="image-care__img">
+                <img data-watch src="@img/care/box-milk.png" alt="image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="productsRange">
+        <div class="productsRange__container">
+          <h2 data-watch class="productsRange__title">products range</h2>
+          <div class="productsRange__items">
+            <div data-watch class="productsRange__item item-productsRange item-productsRange--cones">
+              <div class="item-productsRange__bigPhoto">
+                <img src="@img/productsRange/cones photo.png" alt="cones" />
+              </div>
+
+              <h3 class="item-productsRange__title">cones</h3>
+              <div class="item-productsRange__smallPhoto">
+                <img src="@img/productsRange/cones.png" alt="cones" />
+              </div>
+              <div class="item-productsRange__text">
+                <p>
+                  Our online store offers a wide selection of ice cream cones
+                  with various flavors and fillings.
+                </p>
+              </div>
+              <div data-ripple class="item-productsRange__btn _icon-arrow"></div>
+            </div>
+            <div data-watch class="productsRange__item item-productsRange item-productsRange--juices">
+              <div class="item-productsRange__bigPhoto">
+                <img src="@img/productsRange/juices photo.png" alt="juices" />
+              </div>
+
+              <h3 class="item-productsRange__title">juices</h3>
+              <div class="item-productsRange__smallPhoto">
+                <img src="@img/productsRange/juices.png" alt="juices" />
+              </div>
+              <div class="item-productsRange__text">
+                <p>
+                  We have a wide selection of juices with different flavors
+                  and ingredients to suit every taste.
+                </p>
+              </div>
+              <div data-ripple class="item-productsRange__btn _icon-arrow"></div>
+            </div>
+            <div data-watch class="productsRange__item item-productsRange item-productsRange--icecream">
+              <div class="item-productsRange__bigPhoto">
+                <img src="@img/productsRange/ice creams photo.png" alt="ice creams" />
+              </div>
+
+              <h3 class="item-productsRange__title">ice creams</h3>
+              <div class="item-productsRange__smallPhoto">
+                <img src="@img/productsRange/ice creams.png" alt="ice creams" />
+              </div>
+              <div class="item-productsRange__text">
+                <p>
+                  We offer a wide selection of ice cream with different
+                  flavors and ingredients to suit every taste.
+                </p>
+              </div>
+              <div data-ripple class="item-productsRange__btn _icon-arrow"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flavors">
+        <div class="flavors__bg">
+          <img src="@img/flavors/background.png" alt="background" class="flavors__background" />
+        </div>
+
+        <div class="flavors__container">
+          <div class="flavors__name">Vanilla</div>
+          <div class="flavors__name">Blueberry</div>
+          <div class="flavors__name">Chocolate</div>
+          <div class="flavors__name">Strawberry</div>
+          <div class="flavors__name">Pistachio</div>
+          <div class="flavors__name">Mango</div>
+          <div class="flavors__body">
+            <div data-watch class="flavors__image">
+              <img class="img-iceCream" src="@img/flavors/ice cream.png" alt="ice cream" />
+            </div>
+            <div  class="flavors__content content-flavors">
+              <h2 data-watch class="content-flavors__title">heavenly flavors</h2>
+              <div data-watch class="content-flavors__text">
+                <p>
+                  We want to bring the joy of delicious, unique and classic
+                  flavors right to your doorstep. Whether you prefer rich,
+                  creamy classics or new adventurous flavors, we have
+                  something for everyone.
+                </p>
+              </div>
+              <div class="content-flavors__actions">
+                <button class="content-flavors__button button">
+                  Learn More
+                </button>
+                <button class="content-flavors__button button button--white">
+                  Try Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <img src="img/contact/bg contact.png" alt="cream ice" class="contact__bg" />
+        <div class="contact__container">
+          <div class="contact__content">
+            <form action="#" class="contact-form">
+              <div class="form-body">
+                <input type="text" class="contact__input" placeholder="enter your email" />
+                <button class="contact__button button button--smallBorder">
+                  contact us
+                </button>
+              </div>
+            </form>
+          
+          </div>
+          <div class="contact__image">
+            <div class="img__wrapper">
+              <img src="@img/contact/two cream ice.png" alt="cream ice" />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
 </html>

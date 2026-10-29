@@ -1,24 +1,45 @@
 //====================================================================================================
 .footer {
-    background-color: #f3cb60;
-    // .footer__container
+    
 
+    background-color: #f3cb60;
     &__container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 25% 25% 50%;
         column-gap: toRem(10);
+        @media (max-width: toEm(864)) {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 2 auto;
+        }
     }
 
-    // .footer__logo
+   
 
     &__logo {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        @media (max-width: toEm(864)) {
+            width: 100%;
+        }
+    }
+    &__logo::after {
+        content: '';
+        position: absolute;
+        width: toRem(2);
+        height: toRem(153);
+        background-color: #000;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        z-index: 10;
+        @media (max-width: toEm(864)) {
+            height: 70%;
+        }
     }
 
-    // .footer__menu
+  
 
     &__menu {
         position: relative;
@@ -27,24 +48,37 @@
         @include adaptiveValue('padding-right', 15, 10);
         @include adaptiveValue('padding-left', 28, 15);
     }
-    &__logo,
-    &__menu {
-        &::after {
-            content: '';
-            position: absolute;
-            width: toRem(2);
-            background-color: #000;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 0;
-            z-index: 10;
-            @include adaptiveValue('height', 153, 120);
+    &__menu::after {
+        content: '';
+        position: absolute;
+        width: toRem(2);
+        height: toRem(153);
+        background-color: #000;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        z-index: 10;
+        @media (max-width: toEm(864)) {
+            display: none;
         }
     }
-    // .footer__form
+
+   
+
+    &__form {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue('padding-left', 36, 10);
+        @include adaptiveValue('padding-right', 20, 10);
+        @media (max-width: toEm(864)) {
+            grid-column: 1 / -1;
+            justify-self: center;
+            padding: toRem(15) toRem(5);
+        }
+    }
 }
 .logo-footer {
-    // .logo-footer__wrapper
+   
 
     &__wrapper {
         width: 66%;
@@ -54,27 +88,27 @@
     }
 }
 .menu-footer {
-    // .menu-footer__list
+   
 
     &__list {
     }
 
-    // .menu-footer__item
+  
 
     &__item {
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 30, 15);
         }
-
-        // .menu-footer__link
     }
+
+   
+
     &__link {
         font-weight: 500;
         line-height: 100%;
         letter-spacing: 12%;
         transition: all ease 1s;
-
-        @include adaptiveValue('font-size', 24, 12);
+        @include adaptiveValue('font-size', 24, 16);
         @media (any-hover: hover) {
             &:hover {
                 text-decoration: underline;
@@ -82,24 +116,47 @@
         }
     }
 }
-
-.footer__socialNetworks {
+.form-footer {
+  
     display: flex;
-    align-self: center;
-    justify-content: center;
-    height: toRem(91);
+    input {
+        width: 54%;
+        background-color: #fff;
+        border: toRem(2) solid #000;
+        border-radius: toRem(14);
+        color: rgb(0, 0, 0, 0.4);
+        margin-right: toRem(18);
+        padding-right: toRem(10);
+        @include adaptiveValue('font-size', 20, 14);
+        @include adaptiveValue('padding-left', 30, 10);
+    }
+}
 
+.bottom-footer {
+  background-color: #000;
+  @include adaptiveValue("padding-block",26 ,10 );
+
+  &__container {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 
-    img {
-        margin-right: toRem(21);
-        margin-right: toRem(21);
-        @media (max-width: $tablet) {
-            width: 70%;
-            margin-right: toRem(0);
-        }
+  &__copyright {
+    
+    color: #FFF;
+text-align: center;
+font-weight: 500;
+line-height: 1;
+letter-spacing: 2.88px;
+@include adaptiveValue("font-size",20 ,10 );
+
+    span {
+      color: #e5b83d;
     }
-    @media (max-width: $tablet) {
-        justify-content: center;
-    }
+  }
+
 }

@@ -107,11 +107,11 @@
         font-weight: 500;
         line-height: 100%;
         letter-spacing: 12%;
-        transition: all ease 1s;
+        transition: color ease 0.3s;
         @include adaptiveValue('font-size', 24, 16);
         @media (any-hover: hover) {
             &:hover {
-                text-decoration: underline;
+              color: #5f5a5a;
             }
         }
     }

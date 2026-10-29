@@ -58,9 +58,8 @@
     // .menu__link
     &__link {
         text-transform: capitalize;
-        transition: all ease 0.5s;
-        line-height: 99.75%; /* 31.92/32 */
-
+        transition: all ease 0.3s;
+        line-height: 99.75%;
         margin-bottom: toRem(5);
 
         @include adaptiveValue('font-size', 32, 25, 0, $maxWidth, 767.98);
@@ -72,7 +71,7 @@
             @include adaptiveValue('font-size', 40, 30);
         }
         &:hover {
-            text-decoration: underline;
+           color: #f09bb2;
         }
     }
 }

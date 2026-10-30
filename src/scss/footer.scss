@@ -111,7 +111,7 @@
         @include adaptiveValue('font-size', 24, 16);
         @media (any-hover: hover) {
             &:hover {
-              color: #5f5a5a;
+           color: #fff;
             }
         }
     }

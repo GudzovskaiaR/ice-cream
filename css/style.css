@@ -194,7 +194,7 @@ h6 {
 }
 .menu__link {
   text-transform: capitalize;
-  transition: all ease .3s;
+  transition: color ease .3s;
   line-height: 99.75%;
   margin-bottom: .3125rem;
   display: inline-block
@@ -1859,6 +1859,9 @@ h6 {
   .menu__link {
     color: #fff
   }
+  .menu__link:hover {
+    color: #daeeff
+  }
   .icon-menu {
     display: block;
     position: relative;
@@ -2252,7 +2255,7 @@ h6 {
     transform: translateY(-4px) scale(1.08)
   }
   .menu-footer__link:hover {
-    color: #5f5a5a
+    color: #fff
   }
   ._icon-arrow:hover {
     background-color: #f09bb2;
